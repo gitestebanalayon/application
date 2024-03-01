@@ -28,8 +28,6 @@ function display_block_nivel1(height_a, height_b) {
         height_b.style.height = `${result}px`;
     }
 }
-
-
 /*--FUNTIONS-STACK-NAV-END--*/
 
 export {
