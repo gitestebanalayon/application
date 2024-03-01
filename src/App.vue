@@ -9,9 +9,11 @@
     <NavLeft/>
   </div>
   
+  <RouterView/>
 </template>
 
 <script setup>
+  import { RouterView } from 'vue-router'
   import  NavTop  from './components/navs/top/Component.vue'
   import  NavLeft  from './components/navs/left/Component.vue'
 </script>

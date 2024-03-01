@@ -4,8 +4,11 @@ import './assets/sass/styles.scss';
 
 import { createApp } from 'vue'
 import App from './App.vue'
+import router from './router/router.js'
 
-createApp(App).mount('#app')
+const app = createApp(App)
+app.use(router)
+app.mount('#app')
 
 /*--ACTIVA EL MENU--*/
 const container = document.querySelector('.left');
