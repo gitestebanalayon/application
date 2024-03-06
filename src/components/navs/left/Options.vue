@@ -5,11 +5,11 @@
             <!----------------------------------SUBMENU PERSONAL---------------------------------->
             <ul v-if="optionGlobal.name == 'Personal'" class="personal">
                 <li>
-                    <RouterLink to="/" class="dropdown_options" id="personal">
+                    <a class="dropdown_options" id="personal">
                         <i :class="optionGlobal.icon" class="icon"></i>
                         <span class="span">{{ optionGlobal.name }}</span>
                         <i class="fa-solid fa-caret-left arrow-nav"></i>
-                    </RouterLink>
+                    </a>
                     <ul class="block">
                         <li v-for="optionPersonal in optionsPersonales" :key="optionPersonal.id">
                             <RouterLink to="/" class="a">
@@ -24,11 +24,11 @@
             <!----------------------------------SUBMENU COMPRAS---------------------------------->
             <ul v-else-if="optionGlobal.name == 'Compras'">
                 <li>
-                    <RouterLink to="/" class="dropdown_options" id="compras">
+                    <a class="dropdown_options" id="compras">
                         <i :class="optionGlobal.icon" class="icon"></i>
                         <span class="span">{{ optionGlobal.name }}</span>
                         <i class="fa-solid fa-caret-left arrow-nav"></i>
-                    </RouterLink>
+                    </a>
 
                     <ul class="block">
                         <li v-for="optionCompra in optionsCompras" :key="optionCompra.id">
@@ -36,11 +36,11 @@
                             <!----------------------------------SUBMENU BS---------------------------------->
                             <ul v-if="optionCompra.name == 'Euro'">
                                 <li>
-                                    <RouterLink to="/" class="dropdown_options" id="euro">
+                                    <a class="dropdown_options" id="euro">
                                         <i :class="optionCompra.icon" class="icon"></i>
                                         <span class="span">{{ optionCompra.name }}</span>
                                         <i class="fa-solid fa-caret-left arrow-nav"></i>
-                                    </RouterLink>
+                                    </a>
                                     <ul class="block">
                                         <li v-for="optionPago in optionsPagos" :key="optionPago.id">
                                             <RouterLink to="/" class="a">
@@ -55,11 +55,11 @@
                             <!----------------------------------SUBMENU DOLARES---------------------------------->
                             <ul v-if="optionCompra.name == 'Dolares'">
                                 <li>
-                                    <RouterLink to="/" class="dropdown_options" id="dolares">
+                                    <a class="dropdown_options" id="dolares">
                                         <i :class="optionCompra.icon" class="icon"></i>
                                         <span class="span">{{ optionCompra.name }}</span>
                                         <i class="fa-solid fa-caret-left arrow-nav"></i>
-                                    </RouterLink>
+                                    </a>
                                     <ul class="block">
                                         <li v-for="optionPago in optionsPagos" :key="optionPago.id">
                                             <RouterLink to="/" class="a">
@@ -80,11 +80,11 @@
 
             <ul v-else-if="optionGlobal.name == 'Bank'">
                 <li>
-                    <RouterLink to="/" class="dropdown_options" id="bank">
+                    <a class="dropdown_options" id="bank">
                         <i :class="optionGlobal.icon" class="icon"></i>
                         <span class="span">{{ optionGlobal.name }}</span>
                         <i class="fa-solid fa-caret-left arrow-nav"></i>
-                    </RouterLink>
+                    </a>
                     <ul class="block">
                         <li v-for="optionBank in optionsBank" :key="optionBank.id">
                             <RouterLink to="/" class="a">
@@ -159,6 +159,7 @@
         @include align-items-center; 
         border-radius: 3px;
         transition: $transition-efect cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        cursor: pointer;
     }
     
     .icon{
