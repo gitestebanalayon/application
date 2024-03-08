@@ -11,7 +11,7 @@
   
   <RouterView/>
 </template>
-<h1>rama dev1</h1>
+
 <script setup>
   import { RouterView } from 'vue-router'
   import  NavTop  from './components/navs/top/Component.vue'
